@@ -1,0 +1,31 @@
+
+
+services:
+  backend:
+    build: .
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+    environment:
+      DB_USER: postgres
+      DB_HOST: db
+      DB_DATABASE: crud-api
+      DB_PORT: 5432
+      DB_PASSWORD: Sarthak26
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: Sarthak26
+      POSTGRES_DB: crud-api
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
