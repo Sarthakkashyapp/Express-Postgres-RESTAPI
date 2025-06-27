@@ -1,4 +1,4 @@
-# 🚀 Express + PostgreSQL REST API
+# Express + PostgreSQL REST API
 
 A simple, efficient RESTful API built using **Node.js**, **Express**, and **PostgreSQL**, all containerized with **Docker** and managed via **Docker Compose**.
 
